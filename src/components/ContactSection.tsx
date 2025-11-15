@@ -78,7 +78,7 @@ const ContactSection = () => {
               Get Your Workforce Solution Today
             </h2>
             <p className="text-lg text-muted-foreground">
-              Contact LC Patel for immediate assistance with your industrial workforce needs
+              Contact LC Patel at Shree Ganesh Enterprise for immediate assistance with your industrial workforce needs
             </p>
           </div>
 
@@ -91,7 +91,7 @@ const ContactSection = () => {
                 <div className="space-y-4">
                   <div>
                     <p className="font-semibold text-lg mb-2">LC Patel</p>
-                    <p className="opacity-90">Director, LC Industrial Services</p>
+                    <p className="opacity-90">Shree Ganesh Enterprise</p>
                   </div>
 
                   <div className="flex items-start gap-3">
@@ -108,8 +108,8 @@ const ContactSection = () => {
                     <Mail className="w-5 h-5 mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <a href="mailto:sge777999@gmail.com" className="hover:underline break-all">
-                        sge777999@gmail.com
+                      <a href="mailto:lcpatel1981@gmail.com" className="hover:underline break-all">
+                        lcpatel1981@gmail.com
                       </a>
                     </div>
                   </div>
@@ -117,10 +117,17 @@ const ContactSection = () => {
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
                     <div>
-                      <p className="font-medium">Service Areas</p>
-                      <p className="opacity-90">Pan-India Coverage</p>
-                      <p className="text-sm opacity-75 mt-1">Gujarat, Maharashtra, Rajasthan & More</p>
+                      <p className="font-medium">Address</p>
+                      <p className="text-sm opacity-90">
+                        24, Krishna Kutir, Survey No 223,<br />
+                        Meghpar Borichi, Taluka: Anjar,<br />
+                        Dist: Kachchh, Pin 377110
+                      </p>
                     </div>
+                  </div>
+                  
+                  <div className="text-sm opacity-75 mt-2">
+                    <p>GSTIN: 24BCHPP3163R1Z1</p>
                   </div>
                 </div>
 

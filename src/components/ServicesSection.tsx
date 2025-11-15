@@ -82,7 +82,7 @@ const ServicesSection = () => {
                     <div className={`${index % 2 === 1 ? 'md:order-2' : ''}`}>
                       <img 
                         src={service.image} 
-                        alt={`${service.title} - LC Industrial Services`}
+                        alt={`${service.title} - Shree Ganesh Enterprise`}
                         className="w-full h-full object-cover min-h-[300px]"
                       />
                     </div>

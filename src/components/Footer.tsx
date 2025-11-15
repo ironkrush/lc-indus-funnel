@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl font-bold mb-6">
-              Professional Industrial Services Across India
+              Shree Ganesh Enterprise - Professional Industrial Services Across India
             </h2>
             <div className="grid md:grid-cols-2 gap-8 text-sm opacity-90">
               <div>
@@ -43,9 +43,12 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             {/* Company Info */}
             <div>
-              <h3 className="text-xl font-bold mb-4">LC Industrial Services</h3>
+              <h3 className="text-xl font-bold mb-4">Shree Ganesh Enterprise</h3>
               <p className="text-sm opacity-90 mb-4">
                 Your trusted partner for industrial workforce solutions, loading operations, solar installations, and corporate facilities management.
+              </p>
+              <p className="text-xs opacity-75">
+                GSTIN: 24BCHPP3163R1Z1
               </p>
             </div>
 
@@ -83,9 +86,14 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4" />
-                  <a href="mailto:sge777999@gmail.com" className="hover:underline break-all">
-                    sge777999@gmail.com
+                  <a href="mailto:lcpatel1981@gmail.com" className="hover:underline break-all">
+                    lcpatel1981@gmail.com
                   </a>
+                </div>
+                <div className="text-xs opacity-75 mt-2">
+                  24, Krishna Kutir, Survey No 223,<br />
+                  Meghpar Borichi, Taluka: Anjar,<br />
+                  Dist: Kachchh, Pin 377110
                 </div>
               </div>
             </div>
@@ -94,7 +102,7 @@ const Footer = () => {
           {/* Bottom Bar */}
           <div className="border-t border-primary-foreground/20 pt-6 text-center text-sm opacity-75">
             <p>
-              © {new Date().getFullYear()} LC Industrial Services. All rights reserved.
+              © {new Date().getFullYear()} Shree Ganesh Enterprise. All rights reserved.
             </p>
             <p className="mt-2">
               Reliable Industrial Workforce Solutions • Pan-India Service • 24/7 Support

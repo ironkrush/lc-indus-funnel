@@ -17,7 +17,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.75)), url(${heroImage})`,
+          backgroundImage: `linear-gradient(rgba(234, 88, 12, 0.85), rgba(194, 65, 12, 0.75)), url(${heroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -68,7 +68,7 @@ const Hero = () => {
               onClick={handleCallClick}
               className="bg-white/10 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6"
             >
-              Talk to LC Patel
+              Call Now
             </Button>
           </div>
         </div>

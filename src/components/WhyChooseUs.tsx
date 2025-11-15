@@ -47,7 +47,7 @@ const WhyChooseUs = () => {
           {/* Section Header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Choose LC Industrial Services?
+              Why Choose Shree Ganesh Enterprise?
             </h2>
             <p className="text-lg opacity-90 max-w-2xl mx-auto">
               Your trusted partner for reliable, professional industrial workforce solutions
