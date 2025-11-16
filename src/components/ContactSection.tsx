@@ -5,7 +5,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Building2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
@@ -36,12 +35,24 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // Send email via edge function
-      const { error } = await supabase.functions.invoke("send-contact-email", {
-        body: formData,
+      // Send form data to n8n webhook
+      const webhookUrl = import.meta.env.VITE_N8N_WEBHOOK_URL;
+
+      if (!webhookUrl) {
+        throw new Error("Webhook URL not configured");
+      }
+
+      const response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
 
-      if (error) throw error;
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
 
       toast({
         title: "Success!",
