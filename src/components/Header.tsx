@@ -7,7 +7,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">SG</span>
+              <span className="text-primary-foreground font-bold text-xl">SGE</span>
             </div>
             <div>
               <h1 className="text-xl md:text-2xl font-bold text-primary">
