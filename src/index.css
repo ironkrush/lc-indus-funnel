@@ -29,7 +29,7 @@ All colors MUST be HSL.
     --muted-foreground: 24 16% 47%;
 
     /* Bright Orange for CTAs */
-    --accent: 33 100% 50%;
+    --accent: 24 75% 68%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -90,7 +90,7 @@ All colors MUST be HSL.
     --muted: 24 16% 20%;
     --muted-foreground: 24 16% 65%;
 
-    --accent: 33 100% 50%;
+    --accent: 24 75% 68%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
