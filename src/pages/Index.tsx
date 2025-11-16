@@ -6,6 +6,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import CTASection from "@/components/CTASection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import FloatingActionButtons from "@/components/FloatingActionButtons";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <CTASection />
       <ContactSection />
       <Footer />
+      <FloatingActionButtons />
     </main>
   );
 };

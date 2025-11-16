@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Building2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -17,49 +20,53 @@ const ContactSection = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Basic validation
     if (!formData.name || !formData.phone || !formData.service) {
       toast({
-        title: "Missing Information",
-        description: "Please fill in all required fields.",
-        variant: "destructive"
+        title: "Error",
+        description: "Please fill in all required fields",
+        variant: "destructive",
       });
       return;
     }
 
-    // Phone validation
-    if (!/^\d{10}$/.test(formData.phone.replace(/\D/g, ''))) {
+    setIsSubmitting(true);
+
+    try {
+      // Send email via edge function
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: formData,
+      });
+
+      if (error) throw error;
+
       toast({
-        title: "Invalid Phone Number",
-        description: "Please enter a valid 10-digit phone number.",
-        variant: "destructive"
+        title: "Success!",
+        description: "Your enquiry has been sent successfully. We'll contact you soon!",
       });
-      return;
+
+      // Reset form
+      setFormData({
+        name: '',
+        company: '',
+        service: '',
+        phone: '',
+        location: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send your enquiry. Please try calling us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-
-    // Construct WhatsApp message
-    const message = `*New Enquiry from Website*%0A%0A*Name:* ${formData.name}%0A*Company:* ${formData.company}%0A*Service Required:* ${formData.service}%0A*Phone:* ${formData.phone}%0A*Location:* ${formData.location}%0A*Message:* ${formData.message}`;
-    
-    // Send to WhatsApp
-    window.open(`https://wa.me/919979623217?text=${message}`, '_blank');
-    
-    toast({
-      title: "Enquiry Sent!",
-      description: "We'll get back to you shortly.",
-    });
-
-    // Reset form
-    setFormData({
-      name: '',
-      company: '',
-      service: '',
-      phone: '',
-      location: '',
-      message: ''
-    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -70,7 +77,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-background">
+    <section id="contact-section" className="py-16 bg-background animate-fade-in">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
@@ -108,8 +115,8 @@ const ContactSection = () => {
                     <Mail className="w-5 h-5 mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <a href="mailto:lcpatel1981@gmail.com" className="hover:underline break-all">
-                        lcpatel1981@gmail.com
+                      <a href="mailto:Sge777999@gmail.com" className="hover:underline break-all">
+                        Sge777999@gmail.com
                       </a>
                     </div>
                   </div>
@@ -119,9 +126,9 @@ const ContactSection = () => {
                     <div>
                       <p className="font-medium">Address</p>
                       <p className="text-sm opacity-90">
-                        24, Krishna Kutir, Survey No 223,<br />
-                        Meghpar Borichi, Taluka: Anjar,<br />
-                        Dist: Kachchh, Pin 377110
+                        24, Krishna Kutir, Adipur<br />
+                        Ta Anjar, Dist Kutch<br />
+                        Gujarat - 370110
                       </p>
                     </div>
                   </div>
@@ -237,9 +244,10 @@ const ContactSection = () => {
                   <Button 
                     type="submit" 
                     size="lg"
-                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                    className="w-full"
+                    disabled={isSubmitting}
                   >
-                    Send Enquiry via WhatsApp
+                    {isSubmitting ? "Sending..." : "Send Enquiry"}
                   </Button>
                 </form>
               </Card>

@@ -86,14 +86,14 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4" />
-                  <a href="mailto:lcpatel1981@gmail.com" className="hover:underline break-all">
-                    lcpatel1981@gmail.com
+                  <a href="mailto:Sge777999@gmail.com" className="hover:underline break-all">
+                    Sge777999@gmail.com
                   </a>
                 </div>
                 <div className="text-xs opacity-75 mt-2">
-                  24, Krishna Kutir, Survey No 223,<br />
-                  Meghpar Borichi, Taluka: Anjar,<br />
-                  Dist: Kachchh, Pin 377110
+                  24, Krishna Kutir, Adipur<br />
+                  Ta Anjar, Dist Kutch<br />
+                  Gujarat - 370110
                 </div>
               </div>
             </div>
