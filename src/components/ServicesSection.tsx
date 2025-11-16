@@ -25,7 +25,7 @@ const ServicesSection = () => {
     },
     {
       icon: Zap,
-      title: "Solar Plant AC/DC & Cable Fitting",
+      title: "Solar Fitting",
       image: solarImage,
       description: "Complete solar installation services including AC/DC wiring, solar plate fitting, cable laying, and commissioning support.",
       items: ["AC/DC Wiring", "Solar Plate Fitting", "Cable Laying", "System Commissioning", "Technical Support"]
