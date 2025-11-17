@@ -35,11 +35,11 @@ const FloatingActionButtons = () => {
         onClick={handleWhatsApp}
         size="icon"
         className=" w-14 h-14 rounded-full 
-  bg-gradient-to-r from-blue-600 to-indigo-700
-  hover:from-blue-700 hover:to-indigo-800 
-  text-white shadow-lg hover:shadow-xl 
-  transition-all duration-300 
-  hover:scale-110 
+  bg-gradient-to-r from-[#25D366] to-[#20BA59]
+  hover:from-[#20BA59] hover:to-[#1EA94F]
+  text-white shadow-lg hover:shadow-xl
+  transition-all duration-300
+  hover:scale-110
   animate-scale-in"
         style={{ animationDelay: "100ms" }}
         aria-label="WhatsApp"
