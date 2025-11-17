@@ -8,7 +8,7 @@ const Header = () => {
           <div className="flex items-center gap-3">
              <div className="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden">
     <img 
-      src="/logo.png" 
+      src="logo.png" 
       alt="Logo" 
       className="w-full h-full object-contain"
     />

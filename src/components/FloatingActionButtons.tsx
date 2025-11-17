@@ -24,7 +24,7 @@ const FloatingActionButtons = () => {
       <Button
         onClick={handleCall}
         size="icon"
-        className="w-14 h-14 rounded-full bg-gradient-to-r from-primary to-secondary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-scale-in"
+        className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 to-indigo-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-scale-in"
         aria-label="Call us"
       >
         <Phone className="w-6 h-6" />
@@ -34,7 +34,13 @@ const FloatingActionButtons = () => {
       <Button
         onClick={handleWhatsApp}
         size="icon"
-        className="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20BA59] text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-scale-in"
+        className=" w-14 h-14 rounded-full 
+  bg-gradient-to-r from-blue-600 to-indigo-700
+  hover:from-blue-700 hover:to-indigo-800 
+  text-white shadow-lg hover:shadow-xl 
+  transition-all duration-300 
+  hover:scale-110 
+  animate-scale-in"
         style={{ animationDelay: "100ms" }}
         aria-label="WhatsApp"
       >
@@ -45,7 +51,7 @@ const FloatingActionButtons = () => {
       <Button
         onClick={handleEnquire}
         size="icon"
-        className="w-14 h-14 rounded-full bg-gradient-to-r from-secondary to-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-scale-in"
+        className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 to-indigo-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-scale-in"
         style={{ animationDelay: "200ms" }}
         aria-label="Send enquiry"
       >
