@@ -14,42 +14,37 @@ const ProblemSection = () => {
 
   return (
     <section className="py-16 bg-muted">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Image */}
-            <div className="order-2 md:order-1">
-              <img 
-                src={problemImage} 
-                alt="Industrial warehouse operations showing supply chain challenges" 
-                className="rounded-lg shadow-xl w-full"
-              />
-            </div>
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto">
+      
+      {/* Center Everything */}
+      <div className="grid place-items-center text-center gap-6">
+        
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          Are These Challenges Slowing Down Your Operations?
+        </h2>
 
-            {/* Content */}
-            <div className="order-1 md:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Are These Challenges Slowing Down Your Operations?
-              </h2>
-              <div className="space-y-4">
-                {problems.map((problem, index) => (
-                  <div 
-                    key={index} 
-                    className="flex items-start gap-3 bg-background p-4 rounded-lg shadow-sm"
-                  >
-                    <problem.icon className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
-                    <p className="text-foreground">{problem.text}</p>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-6 text-lg text-muted-foreground font-medium">
-                We solve these problems with trained, verified workforce and reliable execution.
-              </p>
+        <div className="space-y-4 w-full">
+          {problems.map((problem, index) => (
+            <div 
+              key={index} 
+              className="flex items-start gap-3 bg-background p-4 rounded-lg shadow-sm"
+            >
+              <problem.icon className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
+              <p className="text-foreground text-left">{problem.text}</p>
             </div>
-          </div>
+          ))}
         </div>
+
+        <p className="mt-6 text-lg text-muted-foreground font-medium">
+          We solve these problems with trained, verified workforce and reliable execution.
+        </p>
+
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
   );
 };
 
