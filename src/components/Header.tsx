@@ -6,9 +6,13 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">SGE</span>
-            </div>
+             <div className="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden">
+    <img 
+      src="src\assets\logo.png" 
+      alt="Logo" 
+      className="w-full h-full object-contain"
+    />
+  </div>
             <div>
               <h1 className="text-xl md:text-2xl font-bold text-primary">
                 Shree Ganesh Enterprise
