@@ -201,9 +201,9 @@ const ContactSection = () => {
                       className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground"
                     >
                       <option value="">Select a service</option>
-                      <option value="Industrial Loading & Unloading">Industrial Loading & Unloading</option>
+                      <option value="Industrial Loading & Unloading">Industrial All Item Loading & Unloading</option>
                       <option value="Labour Supply">Labour Supply</option>
-                      <option value="Solar Plant Services">Solar Plant AC/DC & Cable Fitting</option>
+                      <option value="Solar Plant Services">Solar Panel & Cable Fitting</option>
                       <option value="Canteen Facility">Canteen Facility</option>
                       <option value="Staff Transport">Staff Bus & Employee Transport</option>
                       <option value="Other">Other / Multiple Services</option>
