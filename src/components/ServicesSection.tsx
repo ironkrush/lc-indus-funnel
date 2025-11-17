@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Package, Users, Zap, Utensils, Bus } from "lucide-react";
-import loadingImage from "@/assets/loading-unloading.jpg";
+import loadingImage from "@/assets/loading-unloading.jpeg";
 import labourImage from "@/assets/labour-supply.jpg";
-import solarImage from "@/assets/solar-installation.jpg";
-import canteenImage from "@/assets/canteen-facility.jpg";
-import transportImage from "@/assets/staff-transport.jpg";
+import solarImage from "@/assets/solar-installation.jpeg";
+import canteenImage from "@/assets/canteen-facility.jpeg";
+import transportImage from "@/assets/staff-transport.jpeg";
 
 const ServicesSection = () => {
   const services = [
