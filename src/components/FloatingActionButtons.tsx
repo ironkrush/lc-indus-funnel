@@ -19,8 +19,10 @@ const FloatingActionButtons = () => {
   };
 
   return (
-    <div className="fixed bottom-8 right-8 flex flex-col gap-3 z-50 animate-fade-in">
-      {/* Call Button */}
+    <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-50 animate-fade-in">
+
+  {/* Call */}
+  <div className="flex flex-col items-center">
       <Button
         onClick={handleCall}
         size="icon"
@@ -29,25 +31,25 @@ const FloatingActionButtons = () => {
       >
         <Phone className="w-6 h-6" />
       </Button>
+      <span className="text-xs mt-1 text-gray-700">Phone</span>
+  </div>
 
-      {/* WhatsApp Button */}
+  {/* WhatsApp */}
+  <div className="flex flex-col items-center">
       <Button
         onClick={handleWhatsApp}
         size="icon"
-        className=" w-14 h-14 rounded-full 
-  bg-gradient-to-r from-[#25D366] to-[#20BA59]
-  hover:from-[#20BA59] hover:to-[#1EA94F]
-  text-white shadow-lg hover:shadow-xl
-  transition-all duration-300
-  hover:scale-110
-  animate-scale-in"
+        className="w-14 h-14 rounded-full bg-gradient-to-r from-[#25D366] to-[#20BA59] hover:from-[#20BA59] hover:to-[#1EA94F] text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-scale-in"
         style={{ animationDelay: "100ms" }}
         aria-label="WhatsApp"
       >
         <MessageCircle className="w-6 h-6" />
       </Button>
+      <span className="text-xs mt-1 text-gray-700">WhatsApp</span>
+  </div>
 
-      {/* Enquire Button */}
+  {/* Enquire */}
+  <div className="flex flex-col items-center">
       <Button
         onClick={handleEnquire}
         size="icon"
@@ -57,7 +59,11 @@ const FloatingActionButtons = () => {
       >
         <Mail className="w-6 h-6" />
       </Button>
-    </div>
+      <span className="text-xs mt-1 text-gray-700">Form</span>
+  </div>
+
+</div>
+
   );
 };
 
