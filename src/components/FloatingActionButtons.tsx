@@ -7,8 +7,12 @@ const FloatingActionButtons = () => {
   };
 
   const handleWhatsApp = () => {
-    const message = "Hello! I would like to enquire about your industrial services.";
-    window.open(`https://wa.me/919979623217?text=${encodeURIComponent(message)}`, '_blank');
+    const message =
+      "Hello! I would like to enquire about your industrial services.";
+    window.open(
+      `https://wa.me/919979623217?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
   };
 
   const handleEnquire = () => {
@@ -19,51 +23,39 @@ const FloatingActionButtons = () => {
   };
 
   return (
-    <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-50 animate-fade-in">
-
-  {/* Call */}
-  <div className="flex flex-col items-center">
+    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex gap-4 px-4 py-3 bg-white/90 backdrop-blur-md rounded-full shadow-xl border border-gray-200">
+      
+      {/* Phone */}
       <Button
         onClick={handleCall}
-        size="icon"
-        className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 to-indigo-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-scale-in"
-        aria-label="Call us"
+        className="flex items-center gap-2 px-4 py-2 rounded-full text-white bg-gradient-to-r from-blue-600 to-indigo-700 hover:scale-105 transition"
       >
-        <Phone className="w-6 h-6" />
+        <Phone className="w-5 h-5" />
+        <span className="text-sm font-medium">Phone</span>
       </Button>
-      <span className="text-xs mt-1 text-gray-700">Phone</span>
-  </div>
 
-  {/* WhatsApp */}
-  <div className="flex flex-col items-center">
+      {/* WhatsApp */}
       <Button
         onClick={handleWhatsApp}
-        size="icon"
-        className="w-14 h-14 rounded-full bg-gradient-to-r from-[#25D366] to-[#20BA59] hover:from-[#20BA59] hover:to-[#1EA94F] text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-scale-in"
-        style={{ animationDelay: "100ms" }}
-        aria-label="WhatsApp"
+        className="flex items-center gap-2 px-4 py-2 rounded-full text-white 
+        bg-gradient-to-r from-[#25D366] to-[#20BA59]
+        hover:scale-105 transition"
       >
-        <MessageCircle className="w-6 h-6" />
+        <MessageCircle className="w-5 h-5" />
+        <span className="text-sm font-medium">WhatsApp</span>
       </Button>
-      <span className="text-xs mt-1 text-gray-700">WhatsApp</span>
-  </div>
 
-  {/* Enquire */}
-  <div className="flex flex-col items-center">
+      {/* Enquiry Form */}
       <Button
         onClick={handleEnquire}
-        size="icon"
-        className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 to-indigo-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-scale-in"
-        style={{ animationDelay: "200ms" }}
-        aria-label="Send enquiry"
+        className="flex items-center gap-2 px-4 py-2 rounded-full text-white 
+        bg-gradient-to-r from-blue-600 to-indigo-700
+        hover:scale-105 transition"
       >
-        <Mail className="w-6 h-6" />
+        <Mail className="w-5 h-5" />
+        <span className="text-sm font-medium">Form</span>
       </Button>
-      <span className="text-xs mt-1 text-gray-700">Form</span>
-  </div>
-
-</div>
-
+    </div>
   );
 };
 
