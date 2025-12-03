@@ -5,12 +5,10 @@ import labourImage from "@/assets/labour-supply.jpg";
 import solarImage from "@/assets/solar-installation.jpeg";
 import canteenImage from "@/assets/canteen-facility.jpeg";
 import transportImage from "@/assets/staff-transport.jpeg";
-
-// Placeholder images for new services - replace with actual images later
-const edibleOilPlaceholder = "https://placehold.co/600x400/e2e8f0/1e293b?text=Edible+Oil+Loading";
-const drumsPlaceholder = "https://placehold.co/600x400/e2e8f0/1e293b?text=Drums+Loading";
-const woodenPlaceholder = "https://placehold.co/600x400/e2e8f0/1e293b?text=Wooden+Material";
-const carTransportPlaceholder = "https://placehold.co/600x400/e2e8f0/1e293b?text=Car+Transport";
+import edibleOilPlaceholder from "@/assets/edible.jpeg";
+import drumsPlaceholder from "@/assets/drums.jpeg";
+import woodenPlaceholder from "@/assets/wooden.jpeg";
+import carTransportPlaceholder from "@/assets/cartrans.jpeg";
 
 const ServicesSection = () => {
   const services = [
