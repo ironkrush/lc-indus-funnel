@@ -1,48 +1,74 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Package, Users, Zap, Utensils, Bus } from "lucide-react";
-import loadingImage from "@/assets/loading-unloading.jpeg";
+import { Users, Zap, Utensils, Bus, Droplet, Drum, TreePine, Car } from "lucide-react";
 import labourImage from "@/assets/labour-supply.jpg";
 import solarImage from "@/assets/solar-installation.jpeg";
 import canteenImage from "@/assets/canteen-facility.jpeg";
 import transportImage from "@/assets/staff-transport.jpeg";
 
+// Placeholder images for new services - replace with actual images later
+const edibleOilPlaceholder = "https://placehold.co/600x400/e2e8f0/1e293b?text=Edible+Oil+Loading";
+const drumsPlaceholder = "https://placehold.co/600x400/e2e8f0/1e293b?text=Drums+Loading";
+const woodenPlaceholder = "https://placehold.co/600x400/e2e8f0/1e293b?text=Wooden+Material";
+const carTransportPlaceholder = "https://placehold.co/600x400/e2e8f0/1e293b?text=Car+Transport";
+
 const ServicesSection = () => {
   const services = [
     {
-      icon: Package,
-      title: "Industrial Loading & Unloading",
-      image: loadingImage,
-      description: "Expert handling of edible oil tins, timber wood, drums, rice bags, sugar bags. Professional warehouse teams for efficient dock operations.",
-      items: ["Edible Oil & Tins", "Timber Wood Handling", "Drums & Containers", "Rice & Sugar Bags", "Warehouse Operations"]
+      icon: Users,
+      title: "Labour Supply Services",
+      image: labourImage,
+      description: "Professional skilled and semi-skilled workforce solutions for industrial operations across Gujarat. Verified, trained workers ready for immediate deployment with flexible shift-based arrangements.",
+      items: ["Skilled Industrial Workers", "Semi-Skilled Labour Force", "24/7 Shift-Based Teams", "Immediate Deployment Available", "Background Verified & Trained Staff"]
     },
     {
-      icon: Users,
-      title: "Labour Supply",
-      image: labourImage,
-      description: "Skilled and semi-skilled workforce available for immediate deployment. Verified, trained workers for shift-based operations.",
-      items: ["Skilled Workers", "Semi-Skilled Labour", "Shift-Based Teams", "Urgent Deployment", "Verified & Trained"]
+      icon: Droplet,
+      title: "Edible Oil 15kg Tin Loading & Unloading",
+      image: edibleOilPlaceholder,
+      description: "Specialized handling services for edible oil containers and 15kg tins. Expert loading and unloading operations ensuring safe transportation and zero spillage with trained personnel.",
+      items: ["15kg Tin Handling", "Safe Loading Operations", "Zero Spillage Guarantee", "Quick Turnaround Time", "Warehouse to Truck Services"]
+    },
+    {
+      icon: Drum,
+      title: "Industrial Drums Loading Services",
+      image: drumsPlaceholder,
+      description: "Professional drum loading and unloading services for chemical, oil, and industrial containers. Specialized equipment and trained staff for safe handling of heavy drums and barrels.",
+      items: ["Chemical Drum Handling", "Oil Barrel Loading", "Heavy Container Operations", "Safety Equipment Provided", "Dock to Warehouse Transfer"]
+    },
+    {
+      icon: TreePine,
+      title: "Wooden Material Handling Services",
+      image: woodenPlaceholder,
+      description: "Expert timber and wooden material loading services including planks, logs, furniture, and wooden pallets. Careful handling to prevent damage with experienced workforce.",
+      items: ["Timber Log Handling", "Wooden Plank Loading", "Furniture Transportation", "Pallet Management", "Damage-Free Operations"]
     },
     {
       icon: Zap,
-      title: "Solar Fitting",
+      title: "Solar Panel & Cable Fitting Services",
       image: solarImage,
-      description: "Complete solar installation services including AC/DC wiring, solar plate fitting, cable laying, and commissioning support.",
-      items: ["AC/DC Wiring", "Solar Plate Fitting", "Cable Laying", "System Commissioning", "Technical Support"]
+      description: "Complete solar plant installation services including solar panel fitting, AC/DC wiring, cable laying, and system commissioning. Certified technicians for residential and commercial solar projects.",
+      items: ["Solar Panel Installation", "AC/DC Wiring Services", "Cable Laying & Management", "System Commissioning", "Maintenance Support Available"]
     },
     {
       icon: Utensils,
-      title: "Canteen Facility",
+      title: "Corporate Canteen Facility Management",
       image: canteenImage,
-      description: "Hygienic, healthy, large-capacity corporate meal solutions. Professional staff dining and daily tiffin services.",
-      items: ["Corporate Meals", "Hygienic Kitchen", "Large Capacity", "Daily Tiffin Service", "Staff Dining"]
+      description: "Hygienic and nutritious corporate meal solutions for industrial facilities. Large-capacity kitchen operations with professional staff for daily employee dining and tiffin services.",
+      items: ["Hygienic Kitchen Operations", "Nutritious Meal Planning", "Large Capacity Catering", "Daily Tiffin Services", "Professional Cooking Staff"]
     },
     {
       icon: Bus,
-      title: "Staff Bus & Employee Transport",
+      title: "Staff Bus Transport Services",
       image: transportImage,
-      description: "Safe and timely transportation solutions with buses, vans, and cars. Reliable routes for corporate mobility.",
-      items: ["Employee Buses", "Van Services", "Company Cars", "Safe Routes", "Timely Operations"]
+      description: "Reliable employee transportation solutions with well-maintained buses for corporate and industrial facilities. Safe, timely, and comfortable commute services with experienced drivers.",
+      items: ["Employee Bus Services", "Multiple Route Coverage", "Timely Pick-up & Drop", "Well-Maintained Vehicles", "Experienced Drivers"]
+    },
+    {
+      icon: Car,
+      title: "Staff Car Transport Services",
+      image: carTransportPlaceholder,
+      description: "Premium car transportation services for executives and staff. Comfortable, safe, and professional chauffeur-driven vehicles for corporate mobility and business travel needs.",
+      items: ["Executive Car Services", "Professional Chauffeurs", "Comfortable Vehicles", "Flexible Scheduling", "Corporate Travel Solutions"]
     }
   ];
 
@@ -65,10 +91,10 @@ const ServicesSection = () => {
           {/* Section Header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Industrial Services
+              Complete Industrial Workforce & Logistics Solutions in Gujarat
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive workforce and operational solutions tailored for industrial excellence
+              Professional labour supply, loading services, solar installation, canteen management, and staff transport solutions for industries across India
             </p>
           </div>
 

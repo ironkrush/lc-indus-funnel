@@ -201,11 +201,14 @@ const ContactSection = () => {
                       className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground"
                     >
                       <option value="">Select a service</option>
-                      <option value="Industrial Loading & Unloading">Industrial All Item Loading & Unloading</option>
-                      <option value="Labour Supply">Labour Supply</option>
-                      <option value="Solar Plant Services">Solar Panel & Cable Fitting</option>
-                      <option value="Canteen Facility">Canteen Facility</option>
-                      <option value="Staff Transport">Staff Bus & Employee Transport</option>
+                      <option value="Labour Supply Services">Labour Supply Services</option>
+                      <option value="Edible Oil 15kg Tin Loading & Unloading">Edible Oil 15kg Tin Loading & Unloading</option>
+                      <option value="Industrial Drums Loading Services">Industrial Drums Loading Services</option>
+                      <option value="Wooden Material Handling Services">Wooden Material Handling Services</option>
+                      <option value="Solar Panel & Cable Fitting Services">Solar Panel & Cable Fitting Services</option>
+                      <option value="Corporate Canteen Facility Management">Corporate Canteen Facility Management</option>
+                      <option value="Staff Bus Transport Services">Staff Bus Transport Services</option>
+                      <option value="Staff Car Transport Services">Staff Car Transport Services</option>
                       <option value="Other">Other / Multiple Services</option>
                     </select>
                   </div>
